@@ -27,5 +27,6 @@
         link = link[0];
         var mid = link.href.indexOf("download_file.php?url=");
         link.href = decodeURIComponent(link.href.slice(mid + 22));
+        link.href = link.href.slice(0, link.href.indexOf("&hardware_id="));
     }
 })();
